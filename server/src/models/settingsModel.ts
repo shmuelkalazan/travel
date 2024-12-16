@@ -1,6 +1,6 @@
 import { model, Schema } from "mongoose";
 
-const settingsSechema = new Schema({
+export const settingsSechema = new Schema({
     total :{
         type:Number,
         default:0 ,
@@ -28,5 +28,4 @@ const settingsSechema = new Schema({
 
 })
 
-type Settings = ReturnType<() => typeof settingsSechema>
 export const SettingsModel = model('settins' ,settingsSechema)
