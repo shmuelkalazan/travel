@@ -1,11 +1,6 @@
 import { model, Schema } from "mongoose";
 
-const daySechema = new Schema({
-    date:{
-        type:Date,
-        default:Date.now(),
-        uniq:true
-    },
+const settingsSechema = new Schema({
     total :{
         type:Number,
         default:0 ,
@@ -32,6 +27,6 @@ const daySechema = new Schema({
     },
 
 })
-type Day = ReturnType<() => typeof daySechema>
 
-export const DayModel = model('day' ,daySechema)
+type Settings = ReturnType<() => typeof settingsSechema>
+export const SettingsModel = model('settins' ,settingsSechema)
